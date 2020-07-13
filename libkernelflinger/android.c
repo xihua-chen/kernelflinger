@@ -1072,7 +1072,7 @@ static EFI_STATUS setup_command_line(
                 ret = prepend_command_line(&cmdline16,
                                            (aosp_header->header_version < 2)
                                            ? L"androidboot.diskbus=%s"
-                                           : L"androidboot.boot_devices=pci0000:00/0000:00:%s",
+                                           : L"androidboot.boot_devices=scsi_disk/0:0:0:0",
                                            diskbus);
                 FreePool(diskbus);
                 if (EFI_ERROR(ret))
